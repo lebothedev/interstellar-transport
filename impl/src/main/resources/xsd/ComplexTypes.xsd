@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="https://www.interstellar.transport.discovery.co.za/Routes"
+		   elementFormDefault="qualified">
+
+	<xs:complexType name="PlanetHop">
+		<xs:sequence>
+			<xs:element name="node" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The node for this planet
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The name of this planet
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

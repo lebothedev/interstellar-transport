@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="https://www.interstellar.transport.discovery.co.za/Routes"
+		   elementFormDefault="qualified">
+
+	<xs:complexType name="RouteRequestDocument">
+		<xs:sequence>
+			<xs:element name="origin" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The originating node that represents the planet to start from
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="destination" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The destination node representing the planet to end to
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

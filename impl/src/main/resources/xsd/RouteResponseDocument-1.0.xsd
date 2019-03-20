@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="https://www.interstellar.transport.discovery.co.za/Routes"
+		   xmlns:ts="https://www.interstellar.transport.discovery.co.za/Routes" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="ComplexTypes.xsd"/>
+
+	<xs:complexType name="RouteResponseDocument">
+		<xs:sequence>
+			<xs:element name="hop" type="ts:PlanetHop" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Represent a hop from one node to another
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
