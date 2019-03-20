@@ -23,7 +23,9 @@ public class PlanetResponse implements Serializable {
 
 	public PlanetResponse() {
 	}
-	public PlanetResponse(String node, String name) {
+
+	public PlanetResponse(Long planetId, String node, String name) {
+		this.planetId = planetId;
 		this.node = node;
 		this.name = name;
 	}

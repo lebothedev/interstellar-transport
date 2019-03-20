@@ -53,7 +53,7 @@ public class TransportServiceImpl implements TransportService {
 	public PlanetResponse findPlanetByNode(String node) {
 		Planet planet = transportDBService.findPlanetByNode(node);
 		if (planet != null) {
-			return new PlanetResponse(planet.getNode(), planet.getName());
+			return new PlanetResponse(planet.getId(), planet.getNode(), planet.getName());
 		}
 		return null;
 	}
@@ -61,7 +61,7 @@ public class TransportServiceImpl implements TransportService {
 	public PlanetResponse findPlanetById(Long planetId) {
 		Planet planet = transportDBService.findPlanetById(planetId);
 		if (planet != null) {
-			return new PlanetResponse(planet.getNode(), planet.getName());
+			return new PlanetResponse(planet.getId(), planet.getNode(), planet.getName());
 		}
 		return null;
 	}
@@ -143,8 +143,6 @@ public class TransportServiceImpl implements TransportService {
 	}
 
 	private PlanetResponse buildPlanetResponse(Long id, String node, String name) {
-		PlanetResponse planetResponse = new PlanetResponse(node, name);
-		planetResponse.setPlanetId(id);
-		return planetResponse;
+		return new PlanetResponse(id, node, name);
 	}
 }
